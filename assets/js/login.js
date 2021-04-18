@@ -1,4 +1,5 @@
 $(function () {
+    window.localStorage.removeItem('token')
     // 去往注册页
     $('.regLink').on('click', function () {
         $('.login-box').hide();
@@ -27,10 +28,6 @@ $(function () {
         }
     })
 
-    // ajax的配置对象
-    $.ajaxPrefilter(function (option) {
-        option.url = 'http://api-breakingnews-web.itheima.net' + option.url
-    })
 
     // 提交注册表单
     $('#form_reg').on('submit', function (e) {
